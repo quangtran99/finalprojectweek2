@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Best Game Ever!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class=" row">
+      <div class="col-lg-4 col-12">
+        <div class="form-group position-fixed" id="myForm">
+          <div class="form-container">
+            <label for="playerName">
+              <b>Please enter your nickname to start</b>
+            </label>
+            <input id="inputName" type="text" placeholder="Your name">
+            <button id="submitName" class=" btn border" onclick="submit()">Submit</button>
+
+          </div>
+        </div> <br>
+        <p class="text-primary text-uppercase" id="playerName">Hello</p>
+        <h1 style="text-align: center;"> Welcome to Tom and Jerry game</h1>
+        <h2 style="text-align: center;"> A game about Tom and Jerry and Cheeses and my lack of sleep as well T.T </h2>
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <button class="btn btn-primary btn-block" data-toggle="collapse" href="#collapse1">
+                  <div style="font-size: 20px; font-weight: bold;">HOW TO PLAY</div>
+
+                </button>
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+              <ol class="list-group">
+                <li class="list-group-item">
+                  Enter your name and pick a character as you want to be.
+                </li>
+                <li class="list-group-item">
+                  As Jerry, your job is just to take many cheeses as you can and stay away from Tom. Each cheese will get you 1 point.
+                </li>
+                <li class="list-group-item">
+                  As Tom, you know that it's already hard to be Tom. If Jerry gets 3 cheeses, you will lose. Your job is to chase away Jerry. (I will make Jerry run faster tho)
+                </li>
+                </li>
+                <li class="list-group-item">
+                  Just press reset when ever the time is up.
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="py-2 text-center font-weight-bold" style="font-size: 20px;">💯 Score: <span id="total-score"></span>
+        </div>
+        <div class="py-2 text-center font-weight-bold" style="font-size: 20px;">💥 Previous Score(s): <span
+            id="high-score"></span>     </div>
+        <div class="py-2 text-center font-weight-bold" style="font-size: 20px;">💥 Highest Score: <span
+              id="highest-score"></span>       </div>
+        <div class="py-2 text-center font-weight-bold" style="font-size: 20px;">😂 Round Lost: <span
+            id="round-lost"></span>
+      </div>
+        <!-- highscore - highround  -->
+        <button id="startButton" onclick="startB()" style="display: none ;" class="btn px-3 btn-success">Start
+          Game</button>
+        <div class ="row" style="display: none; justify-content: center" id = "chaB">
+          <button id="tomB" onclick="characterT()"  class="btn px-3 btn-success">Play as Tom</button>
+            <button id="jerryB" onclick="characterJ()"  class="btn px-3 btn-success">Play as Jerry</button>
+        </div>
+        <button id="resetButton" onclick="resetB()" class="btn px-3 btn-success" style="display:none">Reset</button>
+
+      </div>
+
+
+
+
+          <!-- canvas -->
+      <!-- <div class="col-lg-8 col-12 d-flex align-self-center justify-content-center "> -->
+        <div class="col-lg-8 col-12 d-flex align-self-center justify-content-center  ">
+        
+          <canvas id="canvas" style="display: none;"></canvas>
+        </div>
+
+  </div>
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="game.js"></script>
+</body>
+
+</html>
